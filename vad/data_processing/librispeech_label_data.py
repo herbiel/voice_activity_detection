@@ -88,7 +88,7 @@ def automatic_labeling(data_dir, exported_model, visualize=False):
         tf.io.gfile.makedirs(labels_dir)
 
     # TensorFlow inputs
-    features_input_ph = tf.placeholder(shape=(16, 65), dtype=tf.float32)
+    features_input_ph = tf.compat.v1.placeholder(shape=(16, 65), dtype=tf.float32)
     features_input_op = tf.transpose(features_input_ph, perm=[1, 0])
     features_input_op = tf.expand_dims(features_input_op, axis=0)
 

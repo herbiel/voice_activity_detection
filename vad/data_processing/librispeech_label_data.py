@@ -166,7 +166,7 @@ def automatic_labeling(data_dir, exported_model, visualize=False):
                 logger.info(f"{nb_preds} predictions recorded to {labels_dir}")
 
 
-def main(_):
+def main():
     """Main function to run automatic data annotation."""
     parser = argparse.ArgumentParser(
         description="Run Voice Activity Detection CNN inference over audio signals."

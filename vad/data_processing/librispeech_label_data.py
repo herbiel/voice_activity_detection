@@ -77,7 +77,7 @@ def automatic_labeling(data_dir, exported_model, visualize=False):
     """
     np.random.seed(0)
     os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
-    tf.compat.v1.logging.set_verbosity(tf.logging.INFO)
+    tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.INFO)
 
     test_data_dir = os.path.join(data_dir, "test-clean/")
     labels_dir = os.path.join(data_dir, "labels/")

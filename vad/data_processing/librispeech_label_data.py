@@ -84,7 +84,7 @@ def automatic_labeling(data_dir, exported_model, visualize=False):
 
     file_it = file_iter(test_data_dir)
     if not tf.io.gfile.isdir(labels_dir):
-        tf.io.gfile.MakeDirs(labels_dir)
+        tf.io.gfile.makedirs(labels_dir)
 
     # TensorFlow inputs
     features_input_ph = tf.placeholder(shape=(16, 65), dtype=tf.float32)

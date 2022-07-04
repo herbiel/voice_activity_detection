@@ -14,8 +14,7 @@ import seaborn as sns
 import soundfile as sf
 import tensorflow as tf
 from loguru import logger
-import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior() 
+ 
 
 from vad.data_processing.feature_extraction import extract_features
 

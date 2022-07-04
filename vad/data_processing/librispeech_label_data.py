@@ -15,6 +15,8 @@ import soundfile as sf
 import tensorflow as tf
 from loguru import logger
 
+tf.compat.v1.disable_eager_execution()
+
 
 from vad.data_processing.feature_extraction import extract_features
 
@@ -88,7 +90,7 @@ def automatic_labeling(data_dir, exported_model, visualize=False):
         tf.gfile.MakeDirs(labels_dir)
 
     # TensorFlow inputs
-    tf.compat.v1.disable_eager_execution()
+
     features_input_ph = tf.placeholder(shape=(16, 65), dtype=tf.float32)
     features_input_op = tf.transpose(features_input_ph, perm=[1, 0])
     features_input_op = tf.expand_dims(features_input_op, axis=0)
